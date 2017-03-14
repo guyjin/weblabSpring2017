@@ -1,39 +1,33 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
     <head>
-        <title>
-            Block level tags, oh boy!
-        </title>
+        <meta charset="utf-8">
+        <title>BlockBlockBlockBlock</title>
+        <style media="screen">
+            header,
+            div,
+            footer {
+                background-color: tan;
+                display:inline-block;
+                padding: 2em;
+                margin: 3em;
+            }
+        </style>
     </head>
     <body>
         <header>
-            Hi.  I'm a div.
+            <h1>
+                Top Bar Header
+            </h1>
         </header>
-        <nav>
-            <ul>
-                <li>
-                    <a href="about.html">About Us.</a>
-                </li>
-                <li>
-                    <a href="about.html">About Us.</a>
-                </li>
-            </ul>
-        </nav>
         <div>
-            I'm the second div.  whee!
-        </div>
-
-        <form method="post">
-            <label for="firstName">First Name</label>
-            <br />
-            <input type="text" name="firstName" placeholder="enter some text"/>
-            <br />
-            <label for="mycheckbox">
-
-                <input type="checkbox" id="mycheckbox" name="mycheckbox" value="hi">
-                Say Hello
-            </label>
-            <br>
+            <h1>
+                Some Header
+            </h1>
+            <p>
+                Some paragraph text here.
+            </p>
+            <img src="Ragdoll_kittens.jpg" title="some kittens" alt="cute kittens, right?" />
             <select name="mySelectMenu" id="mySelectMenu">
                 <option value="">Select an option</option>
                 <option value="1">option 1</option>
@@ -41,14 +35,32 @@
                 <option value="3">option 3</option>
                 <option value="CO">Colorado</option>
             </select>
-            <br>
-            <textarea name="myTextArea" id="myTextArea" cols="25" rows="4"></textarea>
-            <br>
-            <input type="submit" name="submit" value="Click Me!" />
-            <input type="reset" name="reset" value="reset" />
+        </div>
+        <footer>
+            here's the footer
+        </footer>
 
-        </form>
-
-        <hr />
+        <article class="someArticle">
+            <header>
+                <h1>
+                    Article Name
+                </h1>
+            </header>
+            <section class="mainSection">
+                <p>
+                    some more text.
+                </p>
+            </section>
+            <section class="secondaryContent">
+                <article class="someQuotes">
+                    <p>
+                        "Duuuuuude"
+                    </p>
+                    <footer>
+                        time/date stamp goes here.
+                    </footer>
+                </article>
+            </section>
+        </article>
     </body>
 </html>
