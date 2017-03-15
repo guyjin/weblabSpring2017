@@ -1,0 +1,146 @@
+<!doctype>
+<html>
+    <head>
+        <title>
+            Selector Practice!
+        </title>
+        <style media="screen">
+            a {
+                background-color: blue;
+                color: white;
+            }
+            a:active {
+                background-color: red;
+                color: white;
+                padding: 1em;
+            }
+            a:visited {
+                color: white;
+                background-color: purple;
+            }
+            nav a:first-child {
+                margin-left: 50px;
+            }
+            nav a:last-child {
+                margin-left: 20px;
+            }
+
+            /*nav a:nth-child(1) {
+                display: none;
+            }*/
+            p {
+                font-family: sans-serif;
+                color: red;
+            }
+
+            p {
+                /* overriding the previous rule for 'p' */
+                color: blue;
+            }
+            p:hover {
+                background-color: yellow;
+                color: black;
+            }
+            /* descendent selector */
+            p span {
+                font-weight: bold;
+                color: black;
+            }
+            .content p:nth-child(2) {
+                border: 1px solid orange;
+            }
+            /*
+                Rule for a class
+            */
+            .specialParagraph {
+                margin: 100px;
+            }
+            /*
+                Rule for an ID
+            */
+            #secondParagraph {
+                margin: 0;
+                color: pink;
+            }
+            #secondParagraph:hover {
+                color: red;
+            }
+
+            ul {
+                margin-left: 100px;
+            }
+
+            li {
+                color: blue;
+            }
+
+            /*ul li ol li {
+                color: red;
+            }*/
+
+            #clientSpecial {
+                color: rgba(0,0,0,.5);
+                font-weight: bold;
+            }
+
+            #clientSpecial:after {
+                content: "";
+                /*font-weight: bold;
+                font-size: 45px;
+                color: green; */
+                display: block;
+                height: 10px;
+                width: 10px;
+                background-color: green;
+            }
+            #clientSpecial:before {
+                content: "";
+                display: block;
+                height: 10px;
+                width: 10px;
+                background-color: green;
+            }
+
+        </style>
+    </head>
+    <body>
+        <h1>
+            Selectors!
+        </h1>
+        <nav>
+            <a href="index.html">I'm in a span tag!</a>
+            <br>
+            <a href="https://github.com/guyjin">test link</a>
+        </nav>
+        <span>
+
+        </span>
+        <div class="content">
+            <p style="font-family: monospace;">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor <span>incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor</span> in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </p>
+            <p id="secondParagraph" class="specialParagraph" style="margin: 100px;">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute <span>irure <span>dolor</span> in reprehenderit</span> in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </p>
+            <p class="specialParagraph">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </p>
+        </div>
+        <ul>
+            <li>
+                list item 1
+            </li>
+            <li>
+                list item 2
+                <ol>
+                    <li id="clientSpecial">
+                        sub list item 1
+                    </li>
+                    <li>
+                        sub list item 2
+                    </li>
+                </ol>
+            </li>
+        </ul>
+    </body>
+</html>

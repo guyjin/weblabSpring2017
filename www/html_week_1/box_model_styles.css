@@ -1,0 +1,29 @@
+h1 {
+    font-family: sans-serif;
+    border-bottom: 1px dashed #000;
+}
+
+.box {
+    margin: 10px;
+    padding: 10px;
+    background-color: #666666;
+    color: #fff;
+    border: 1px solid black;
+    width: 400px;
+    /*box-sizing: content-box;*/
+    box-sizing: border-box;
+}
+
+.sandbox {
+    /*width: 300px;*/
+    background-color: tan;
+    position: static; /* default behavior */
+    position: relative;
+    /*position: absolute;*/
+    /*position: fixed;*/
+    top: 30px;
+    left: 50px;
+    display: block; /* default value */
+    display: inline;
+    display: inline-block;
+}
