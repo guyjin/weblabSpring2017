@@ -10,6 +10,10 @@
                 margin: 0;
                 padding:0;
             }
+
+            body {
+                background: transparent url(img/concrete_seamless.png) repeat top left;
+            }
             .card h1{
                 text-align:center;
                 position:relative;
@@ -18,7 +22,8 @@
                 font-family: Arial, Tahoma, Verdana, sans-serif;
                 text-transform: uppercase;
                 opacity: .5;
-                text-shadow: 0px 0px 0px rgba(255,0,0,1);
+                text-shadow: 0px 2px 0px rgba(255,255,255,1);
+                transition: all .6s ease;
             }
             .card {
                 position: relative;
@@ -27,9 +32,18 @@
                 height: 500px;
                 min-width: 500px;
                 max-width: 800px;
-                background:#fffef3;
+                background:#fffef3 url(img/cup-coffee-stain-2.png) no-repeat -135px -145px;
+                background-size: 100%;
                 margin:-300px auto 0;
+                padding: 5px 5px 5px 5px;
+                box-sizing: border-box;
                 border: 1px solid rgba(255, 250, 200, 0.92);
+            }
+
+            .card:hover h1 {
+                font-size: 2.4em;
+                transform: rotate(-2deg);
+                text-shadow: 0px 13px 7px rgba(0,0,0,.7);
             }
 
             .card:before, .card:after {
@@ -41,14 +55,22 @@
                 width: 30%;
                 top: 80%;
                 max-width:300px;
-                background: #777;
+                background: transparent;
                 box-shadow: 0 15px 10px #777;
                 transform: rotate(-3deg);
+                transition: all .6s ease;
             }
             .card:after {
                 transform: rotate(3deg);
                 right: 10px;
                 left: auto;
+            }
+            .card:hover:before {
+                transform: rotate(-10deg);
+            }
+
+            .card:hover:after {
+                transform: rotate(10deg);
             }
         </style>
     </head>
