@@ -1,0 +1,144 @@
+body {
+    height: 500px;
+    background-color: red;
+    background-image: url(img/ep_naturalwhite.png);
+    background-repeat: no-repeat;
+    /*background-repeat: repeat-y;
+    background-repeat: repeat-x;
+    background-repeat: repeat;*/
+    background-position: 20% 20%;
+    /* shorthand! */
+    background: transparent url(img/ep_naturalwhite.png) repeat top left;
+    font-family: sans-serif;
+    font-family: serif;
+    font-family: monospace;
+    font-family: cursive;
+    font-family: fantasy;
+    font-family: system-ui;
+    font-family: Helvetica, Verdana, sans-serif;
+    font-family: "Gill Sans", serif;
+    font-family: Arial, Verdana;
+    font-family: 'Indie Flower', cursive;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    /*font-style: italic;*/
+    font-size: 16px;
+}
+
+h1 {
+    background: black;
+    color: white;
+    font-family: 'Pacifico', cursive;
+}
+
+.box {
+    height: 100px;
+    width: 100px;
+    background-color: purple;
+    border-width: 1px 2px 3px 4px;
+    border-style: solid;
+    border-color: green;
+    border-width: 2px 4px;
+    border-width: 3px 1px 6px;
+
+    /* shorthand */
+
+    border: 1px solid blue;
+
+    border-left: 4px solid red;
+    border-left-style: dashed;
+
+    border-radius: 5px 5px 5px 5px;
+    border-top-left-radius: 10px;
+
+}
+
+p {
+    margin-top: 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    margin: 25px 75px;
+    padding: 10px;
+    text-indent: 5px;
+    letter-spacing: 0px;
+    line-height: 1.4em;
+}
+
+
+.emptyImage {
+    width: 40px;
+    height: 40px;
+    background-color: orange;
+    display: inline-block;
+    float: left;
+}
+
+.secondImg {
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    background-color: red;
+}
+
+.clearFix {
+    clear:both;
+}
+
+.textEffects {
+    text-align: right;
+    text-align: left;
+    text-align: justify;
+}
+
+.textEffects a {
+    text-decoration: none;
+}
+
+.selectedText {
+    text-decoration: underline;
+    text-decoration: line-through;
+    text-decoration: none;
+    text-decoration: overline;
+    text-decoration: blink;
+    text-transform: uppercase;
+    text-transform: lowercase;
+    text-transform: capitalize;
+    text-transform: full-width;
+    font-variant: small-caps;
+}
+
+ul, li {
+    padding: 0;
+    margin: 0;
+}
+
+ul {
+    margin-left: 2em; /* 2 x font size set in body */
+    margin-left: 85px; /* match the margin of the paragraphs */
+    margin-bottom: 50px;
+    list-style-type: square;
+    list-style-type: none;
+    list-style-type: '-'; /* only works in Firefox */
+    list-style-type: circle;
+}
+
+.overflowTest {
+    height: 200px;
+    width: 200px;
+    border: 1px solid black;
+    overflow: hidden;
+    overflow: auto;
+    /*overflow: scroll;*/
+    overflow-y: hidden;
+    overflow-y: scroll;
+    overflow-y: auto;
+    overflow-x: scroll;
+    overflow-x: auto;
+    margin-bottom: 100px;
+}
+
+.overflowTest p {
+    margin: 5px;
+    /*width: 400px;*/
+}
