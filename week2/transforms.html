@@ -1,10 +1,29 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <title>CSS Translations</title>
-    </head>
-    <style media="screen">
+
+<head>
+    <meta charset="utf-8">
+    <title>CSS Translations</title>
+</head>
+<style media="screen">
+    body {
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+        width: 100vw;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .controls {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        align-items: stretch;
+        width: 200px;
+        margin: 0 1rem;
+    }
+    
     .block {
         background-color: red;
         width: 200px;
@@ -17,47 +36,53 @@
         align-items: center;
         font-size: 2rem;
         font-family: sans-serif;
-        box-shadow: 14px 14px 4px rgba(0,0,0,0.5);
-        position: absolute;
-        top: 20px;
-        left: 20px;
+        box-shadow: 14px 14px 4px rgba(0, 0, 0, 0.5);
+        position: relative;
     }
-
+    
     .rotate {
         transform: rotate(20deg);
     }
-
+    
     .slide {
-        transform: translate(200px,300px); /* (x,y) */
+        transform: translate(100px, 150px);
+        /* (x,y) */
     }
-
+    
     .skew {
         transform: skew(30deg, 30deg);
     }
-    </style>
-    <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
-    <script type="text/javascript">
-        $(function() {
-            var block = $('.block');
-            $('.myButton1').on('click', function() {
-                block.toggleClass('rotate');
-            });
-            $('.myButton2').on('click', function() {
-                block.toggleClass('slide');
-            });
-            $('.myButton3').on('click', function() {
-                block.toggleClass('skew');
-            });
+</style>
+<!--<script type="text/javascript" src="https://code.jquery.com/jquery-2.2.0.min.js"></script>-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<script type="text/javascript">
+    $(function() {
+        var block = $('.block');
+        $('.myButton1').on('click', function() {
+            block.toggleClass('rotate');
         });
-    </script>
-    <body>
-        <div class="block">
-            Hello!
-        </div>
+        $('.myButton2').on('click', function() {
+            block.toggleClass('slide');
+        });
+        $('.myButton3').on('click', function() {
+            block.toggleClass('skew');
+        });
+    });
+</script>
+
+<body>
+    <div class="controls">
         <button type="button" name="button" class="myButton1">Rotate</button>
         <button type="button" name="button" class="myButton2">Slide</button>
         <button type="button" name="button" class="myButton3">Skew</button>
+    </div>
+    <div class="block">
+        Hello!
+    </div>
 
 
-    </body>
+
+</body>
+
 </html>
