@@ -1,0 +1,144 @@
+body {
+  background-color: #fff; }
+
+.park {
+  width: 800px;
+  height: 800px;
+  background: repeating-linear-gradient(45deg, #1B562B, #127B34 55px, #146E30 55px, #176711 55px);
+  margin: 0 auto;
+  border-radius: 10px;
+  position: relative;
+  transform: perspective(1000px) rotateX(70deg) rotateY(0deg) rotateZ(-45deg) translateZ(190px);
+  box-shadow: 0 3px 5px black; }
+
+.field {
+  overflow: hidden;
+  width: 750px;
+  height: 750px;
+  background-color: transparent;
+  position: absolute;
+  left: 50px; }
+
+.infield {
+  background-color: #987644;
+  width: 350px;
+  height: 350px;
+  position: absolute;
+  bottom: 0;
+  z-index: 2; }
+  .infield .infieldGrass {
+    background: green;
+    width: 340px;
+    height: 340px;
+    left: 15px;
+    position: relative;
+    bottom: 5px; }
+
+.bag {
+  width: 14px;
+  height: 14px;
+  background-color: #fff;
+  position: absolute; }
+
+.firstsecond {
+  width: 800px;
+  height: 800px;
+  background: #987644;
+  position: absolute;
+  bottom: -270px;
+  border-radius: 1000px;
+  z-index: 1;
+  left: -270px; }
+
+.homePlate {
+  background: #987644;
+  width: 70px;
+  height: 70px;
+  position: absolute;
+  bottom: 25px;
+  left: 25px;
+  z-index: 3;
+  border-radius: 50px; }
+  .homePlate .bag {
+    top: 24px;
+    left: 30px; }
+
+.firstBase,
+.secondBase,
+.thirdBase {
+  background-color: #987644;
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+  position: absolute;
+  z-index: 3;
+  right: -30px;
+  bottom: -10px; }
+  .firstBase .bag,
+  .secondBase .bag,
+  .thirdBase .bag {
+    left: 25px;
+    top: 17px; }
+
+.secondBase {
+  bottom: 325px;
+  right: -30px; }
+  .secondBase .bag {
+    top: 10px;
+    left: 26px; }
+
+.thirdBase {
+  left: -10px;
+  bottom: 330px; }
+  .thirdBase .bag {
+    left: 17px;
+    top: 11px; }
+
+.thirdBaseLine,
+.firstBaseLine {
+  width: 2px;
+  height: 1000px;
+  position: absolute;
+  z-index: 4;
+  background: #fff; }
+
+.thirdBaseLine {
+  bottom: 17px;
+  left: 5px; }
+
+.firstBaseLine {
+  width: 1000px;
+  height: 2px;
+  bottom: 7px;
+  left: 5px; }
+
+.battersBox {
+  border: 2px solid #fff;
+  width: 19px;
+  height: 10px;
+  transform: rotateZ(135deg);
+  position: relative; }
+  .battersBox.left {
+    left: 5px;
+    bottom: -22px; }
+  .battersBox.right {
+    left: 28px;
+    bottom: -30px; }
+
+.mound {
+  background-color: #987644;
+  width: 60px;
+  height: 60px;
+  border-radius: 31px;
+  position: relative;
+  z-index: 8;
+  left: 140px;
+  top: 140px; }
+  .mound .rubber {
+    position: absolute;
+    background: #fff;
+    width: 4px;
+    height: 20px;
+    left: 34px;
+    top: 13px;
+    transform: rotate(-45deg); }

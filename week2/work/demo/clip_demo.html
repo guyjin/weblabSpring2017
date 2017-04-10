@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+	<meta charset="UTF-8">
+	<title>Clip Demo</title>
+	<style>
+		 * {
+			 margin: 0;
+			 padding: 0;
+		 }
+
+		.clip-me {
+
+			/* deprecated version */
+			position: absolute; /* absolute or fixed positioning required */
+			clip: rect(110px, 160px, 170px, 60px); /* or "auto" */
+			/* values descript a top/left point and bottom/right point */
+
+			/* current version (doesn't require positioning) */
+			clip-path: inset(10px 20px 30px 40px); /* or "none" */
+			/* values are from-top, from-right, from-bottom, from-left */
+
+			-webkit-clip-path: ellipse(65px 30px at 125px 40px);
+
+
+		}
+
+		.clip-me:hover {
+			border: 1px solid red;
+		}
+	</style>
+</head>
+<body>
+	<div class="clip-me">
+		<img src="../../cloudvalley.jpg" />
+	</div>
+</body>
+</html>

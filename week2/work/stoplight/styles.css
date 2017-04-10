@@ -1,0 +1,263 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+/*
+    here's our main container that will hold the stoplight.
+*/
+.container {
+    width: 200px;
+    height: 430px;
+    margin: 0 auto;
+    /* Set the point of rotation and transformation to the top/center */
+    transform-origin: 50% 0;
+    /*
+        Load and run a keyframe animation
+        NOTE: these declarations use the Webkit prefix, so they will only work in Safari or Chrome.
+        The animation should take 10 seconds to run.
+    */
+    -webkit-animation-duration: 10s;
+    /*
+        the animation shouldn' stop.
+    */
+    -webkit-animation-iteration-count: infinite;
+    /*
+        load this animation.
+    */
+    -webkit-animation-name: wind;
+
+}
+
+/*
+    this is the yellow box the lights sit in.
+*/
+.lightFrame {
+    background-color: #ffcd14;
+    width: 100%;
+    height: 100%;
+    margin-top: 100px;
+    border: 1px solid #999;
+}
+
+/*
+    Each light inherits these rules.  They are all 1/3 the height of .lightFrame.
+*/
+.light {
+    width: 100%;
+    height: 33.3%;
+    background-color: rgba(59, 57, 22, 0.16);
+    /*
+        Set position: relative so child elements are able to be positioned absolutely within this div.
+    */
+    position: relative;
+}
+
+/*
+    This is the hood that will be at the top of each light.
+*/
+.hood {
+    width: 100px;
+    height: 100px;
+    background: darkgoldenrod;
+    position: absolute;
+    top: 15px;
+    left: 50px;
+    /*
+        Set the border radius to half or just a bit more of the height/width values to make the div appear round.
+    */
+    border-radius: 55px;
+}
+
+
+/*
+    The bulb will sit over most of the hood, leaving the curved slice showing.
+*/
+.bulb {
+    width: 90px;
+    height: 90px;
+    background-color: rgb(110, 110, 110);
+    border-radius: 55px;
+    position: absolute;
+    top: 27px;
+    left: 55px;
+    overflow:hidden;
+}
+
+
+/*
+    We'll use the 'before' pseudo element to position a small 'lamp' in the bulb.  We use z-index to get the correct
+    layering.  Initially the element will be hidden until it's turned 'on'.
+*/
+.bulb::before {
+    display: none;
+    content: '';
+    width: 30px;
+    height: 30px;
+    z-index: 5;
+    position: absolute;
+    border-radius: 15px;
+    left: 30px;
+    top: 30px;
+}
+
+/*
+    The application of the correct class ( in this case, "on" ) changes the display property to 'block'
+*/
+
+.bulb.on::before {
+    display: block;
+}
+
+
+/*
+    Setup the 'after' element to actually house the bulb color.  It will sit on top of the regular 'bulb' div.
+*/
+.bulb::after {
+    content: '';
+    width: 90px;
+    height: 90px;
+    z-index: 6;
+    position: absolute;
+    border-radius: 50px;
+    top: 6px;
+}
+
+/*
+    Set colors and positions for both the 'before' and 'after' elements for all 3 bulbs.
+*/
+
+/*
+    Green
+*/
+.bulb.green::before {
+    background: rgba(0, 255, 0, 0.35);
+    box-shadow: 0 0 42px rgba(0,255,0,0.75);
+}
+.bulb.green::after {
+    background-color: rgba(0, 255, 0, 0.5);
+}
+
+
+/*
+    Yellow
+*/
+.bulb.yellow::before {
+    background: rgba(255, 255, 0, 0.35);
+    box-shadow: 0 0 42px rgba(255,255,0,0.75);
+}
+.bulb.yellow::after {
+    background-color: rgba(255,255,0,0.75);
+}
+
+/*
+    Red.
+*/
+.bulb.red::before {
+    background: rgba(255, 1, 1, 0.35);
+    box-shadow: 0 0 42px rgba(255,0,0,0.75);
+}
+.bulb.red::after {
+    background-color: rgba(255,0,0,0.5);
+}
+
+
+/*
+    The hilight div is pure cosmetics but adds a nice effect.
+*/
+.hilite {
+    width: 20px;
+    height: 20px;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.39);
+    position: absolute;
+    left: 90px;
+    top: 90px;
+
+}
+
+/*
+    The buttons div holds all three buttons.
+*/
+
+.buttons {
+    text-align: center; /* positions the buttons in the center of the div */
+    margin-top: 1em;
+}
+
+button {
+    font-size: 24px;
+    text-align: center;
+    background: none;
+    border: 0;
+    border-right: 2px groove #fff;
+    padding: 5px 10px;
+    color: #999;
+    position: relative;
+}
+
+/*
+    Change to a pointer cursor
+*/
+button:hover {
+    cursor: pointer;
+}
+
+button:focus {
+    outline: 0;
+}
+
+/*
+    Remove the trailing border from the last button
+*/
+
+button:last-child {
+    border-right: 0;
+}
+
+/*
+    Add a small color hilight to each button when they have the class 'on' attached to them.
+*/
+
+button.on::after {
+    content: '';
+    width: 5px;
+    height: 5px;
+    position: absolute;
+    background-color: red;
+}
+
+/*
+    Specify the color of the button hilight for each button.
+*/
+
+button:first-child::after {
+    background-color: red;
+}
+
+button:nth-child(2)::after {
+    background-color: yellow;
+}
+
+button:last-child::after {
+    background-color: green;
+}
+
+/*
+    Define the animation keyframes.  Added a bezier curve timing function to the start and finish frames to help smooth
+    the animation out.
+
+    NOTE: this will only work with browsers that support the Webkit prefix, like Safari or Chrome.
+*/
+
+@-webkit-keyframes wind {
+    0% {
+        transform: rotate(-23deg); animation-timing-function: cubic-bezier(0.33333, 0.66667, 0.66667, 1)
+    }
+    50% {
+        transform: rotate(30deg);
+    }
+    100% {
+        transform: rotate(-23deg);animation-timing-function: cubic-bezier(0.33333, 0, 0.66667, 0.33333)
+    }
+}

@@ -1,0 +1,190 @@
+body {
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+    overflow-y: scroll;
+}
+
+.container {
+    width: 1180px;
+    margin: 0 auto;
+}
+
+header {
+    width: 100%;
+    height: 620px;
+    background: url(img/header_background.jpg) no-repeat top left;
+    background-size: cover;
+    position: relative;
+}
+
+nav {
+    background: url(img/logo.png) no-repeat center left;
+    height: 83px;
+    width: 950px;
+    margin: 0 auto;
+    position: relative;
+    top: 65px;
+}
+
+nav ul,
+nav li {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+
+nav ul {
+
+}
+
+nav li {
+    float: right;
+}
+
+nav li a {
+    color: #fff;
+    font-size: 15px;
+    text-decoration: none;
+    display: block;
+    padding: 6px;
+    margin-left: 34px;
+    transition: all .15s ease;
+    border-radius: 5px;
+    margin-top: 30px;
+}
+
+nav a:hover {
+    background-color: #fff;
+    color: darkblue;
+}
+
+.call {
+    position: absolute;
+    top: 348px;
+    color: #fff;
+    font-size: 16px;
+    left: 120px;
+
+}
+
+.main {
+    font-size: 35px;
+    line-height: 1.4;
+    display: block;
+    width: 845px;
+}
+
+.sub {
+    display: block;
+    margin-top: -16px;
+}
+
+.content {
+    width: 940px;
+    margin: 0 auto;
+}
+
+.content>p {
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+.alert {
+    background-color: #25aa99;
+    color: #fff;
+    font-size: 15px;
+    margin-top: 30px;
+    margin-bottom: 37px;
+    padding: 0 10px 0 20px;
+    border-radius: 5px;
+}
+
+.alert p {
+    line-height: 45px;
+    display: inline-block;
+    /* margin-top: 20px; */
+    padding: 0;
+    margin: 0;
+}
+
+.alert button {
+    background-color: transparent;
+    border: 0;
+    color: #fff;
+    margin-left: 80px;
+}
+
+h1 {
+    margin-bottom: 48px;
+    margin-top: 36px;
+}
+
+.promotedArticles {
+    margin-top: 55px;
+    margin-bottom: 80px;
+}
+
+.promotedArticles::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.articleLink {
+    width: 25%;
+    float: left;
+}
+
+.articleLink h3 {
+    margin: 12px 0;
+    font-size: 18px;
+    font-weight: normal;
+}
+
+.byline {
+    color: #25aa99;
+    display: block;
+    font-size: 14px;
+    margin-bottom: 7px;
+}
+
+.info {
+    color: #A2A1A1;
+    display: block;
+    font-size: 13px;
+    margin-top: 10px;
+
+}
+
+.graph {
+    margin-top: 40px;
+    margin-bottom: 90px;
+}
+
+.subscribe {
+    background-color: #25aa99;
+    padding: 40px 0;
+}
+
+.subscribe form {
+    margin: 0 auto;
+    width: 50%;
+    color: #fff;
+    position: relative;
+}
+
+.subscribe form img {
+    position: absolute;
+    left: 225px;
+    top: 20px;
+}
+
+.subscribe input[type=text] {
+    border-radius: 5px;
+    border: 0;
+    height: 50px;
+    width: 280px;
+    padding-left: 40px;
+    font-size: 14px;
+}
