@@ -13,6 +13,8 @@
         width: 100vw;
         align-items: center;
         justify-content: center;
+        margin: 0;
+        padding: 0;
     }
     
     .controls {
@@ -22,6 +24,10 @@
         align-items: stretch;
         width: 200px;
         margin: 0 1rem;
+        border: 1px solid #666;
+        padding: 1rem;
+        border-radius: 5px;
+        background-color: lightblue;
     }
     
     .block {
@@ -30,7 +36,7 @@
         height: 200px;
         margin: 1rem;
         color: black;
-        transition: all 1s ease;
+        transition: box-shadow .5s ease, top .5s ease, transform 1s ease;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -38,6 +44,15 @@
         font-family: sans-serif;
         box-shadow: 14px 14px 4px rgba(0, 0, 0, 0.5);
         position: relative;
+        border-radius: 8px;
+        border: 1px solid #666;
+        top: 0;
+    }
+    
+    .block:hover {
+        box-shadow: 7px 7px 4px rgba(0, 0, 0, 0.5);
+        top: -7px;
+        cursor: pointer;
     }
     
     .rotate {
