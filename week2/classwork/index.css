@@ -1,0 +1,102 @@
+body {
+    height: 100vh;
+    width: 100vw;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.controls {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: stretch;
+    width: 200px;
+    margin: 0 1em 1em;
+    border: 1px solid #666;
+    padding: 1rem;
+    border-radius: 5px;
+    background-color: lightblue;
+}
+
+.controls button {
+    font-size: 1rem;
+}
+
+.block {
+    height: 200px;
+    width: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: red;
+    color: black;
+    font-size: 2rem;
+    font-family: sans-serif;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    position: relative;
+    top: 0;
+    border: 1px solid black;
+    border-radius: 8px;
+    box-shadow: 14px 14px 4px rgba(0, 0, 0, 0.5);
+    /*transition: all .5s ease;*/
+    transition: box-shadow .5s ease, top .5s linear, transform .3s ease-in 2s;
+}
+
+.block:hover {
+    box-shadow: 7px 7px 4px rgba(0, 0, 0, 0.5);
+    top: -7px;
+    cursor: pointer;
+}
+
+.Rotate {
+    transform: rotate(20deg);
+}
+
+.Slide {
+    transform: translate(100px, 150px);
+}
+
+.Skew {
+    transform: skew(30deg, 30deg);
+}
+
+.grow {
+    -webkit-animation-name: embiggen;
+    animation-name: embiggen;
+    -webkit-animation-duration: 3s;
+    animation-duration: 3s;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    -webkit-animation-direction: alternate;
+    animation-direction: alternate;
+    animation-timing-function: ease-in;
+}
+
+@-webkit-keyframes embiggen {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(3);
+    }
+}
+
+@keyframes embiggen {
+    0% {
+        transform: scale(1) rotate(0deg);
+    }
+    30% {
+        transform: scale(1.6) rotate(10deg);
+    }
+    65% {
+        transform: scale(2.5) rotate(15deg);
+    }
+    100% {
+        transform: scale(3) rotate(20deg);
+    }
+}

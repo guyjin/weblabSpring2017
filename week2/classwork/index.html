@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSS Week 2!</title>
+    <link rel="stylesheet" href="index.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(function() {
+            // Go find the block in the HTML and remember it.
+            var block = $('.block');
+
+            //  Setup listeners for clicks on the button bar
+            $('button').on('click', function() {
+                var newClass = $(this).text();
+                console.log(newClass);
+                if (block.hasClass(newClass)) {
+                    block.toggleClass(newClass);
+                } else {
+                    // reset the class attribute to the base class we started with.
+                    block.attr('class', 'block');
+                    // use the word from the button and add it as a new class to the block.
+                    block.addClass(newClass);
+                };
+
+            });
+
+            $('.block').on('click', function() {
+                $(this).toggleClass('grow');
+            })
+
+        })
+    </script>
+</head>
+
+<body>
+    <div class="controls">
+        <button>Rotate</button>
+        <button>Slide</button>
+        <button>Skew</button>
+    </div>
+    <div class="block">
+        Hello!
+    </div>
+</body>
+
+</html>
