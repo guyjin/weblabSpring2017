@@ -1,0 +1,173 @@
+body {
+    background-color: white;
+}
+
+.park {
+    width: 800px;
+    height: 800px;
+    margin: 0 auto;
+    border-radius: 10px;
+    position: relative;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 1);
+    background: repeating-linear-gradient(45deg, #1B562B, #127B34 55px, #146E30 55px, #176711 55px);
+    transform: perspective(1000px) rotateX(70deg) rotateY(0deg) rotateZ(-45deg) translateZ(190px);
+}
+
+.field {
+    width: 750px;
+    height: 750px;
+    background-color: transparent;
+    position: absolute;
+    left: 50px;
+    overflow: hidden;
+}
+
+.infield {
+    background-color: brown;
+    width: 350px;
+    height: 350px;
+    position: absolute;
+    bottom: 0;
+    z-index: 2;
+}
+
+.infieldGrass {
+    background-color: green;
+    width: 340px;
+    height: 340px;
+    position: relative;
+    left: 15px;
+    bottom: 5px;
+}
+
+.bag {
+    width: 14px;
+    height: 14px;
+    background-color: white;
+    position: absolute;
+}
+
+.firstSecond {
+    width: 800px;
+    height: 800px;
+    background-color: brown;
+    position: absolute;
+    border-radius: 1000px;
+    bottom: -270px;
+    left: -270px;
+    z-index: 1;
+}
+
+.homePlate {
+    background-color: brown;
+    width: 70px;
+    height: 70px;
+    position: absolute;
+    bottom: 25px;
+    left: 25px;
+    border-radius: 50px;
+    z-index: 3;
+}
+
+.homePlate .bag {
+    top: 24px;
+    left: 30px;
+}
+
+.battersBox {
+    border: 2px solid white;
+    width: 19px;
+    height: 10px;
+    position: relative;
+    transform: rotateZ(135deg);
+}
+
+.battersBox.left {
+    left: 5px;
+    bottom: -22px;
+}
+
+.battersBox.right {
+    left: 28px;
+    bottom: -30px;
+}
+
+.firstBase,
+.secondBase,
+.thirdBase {
+    background-color: brown;
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    position: absolute;
+    z-index: 3;
+    right: -30px;
+    bottom: -10px;
+}
+
+.firstBase .bag {
+    left: 25px;
+    top: 17px;
+}
+
+.secondBase {
+    bottom: 325px;
+    right: -30px;
+}
+
+.secondBase .bag {
+    top: 10px;
+    left: 26px;
+}
+
+.thirdBase {
+    left: -10px;
+    bottom: 330px;
+}
+
+.thirdBase .bag {
+    left: 17px;
+    top: 11px;
+}
+
+.thirdBaseLine,
+.firstBaseLine {
+    width: 2px;
+    height: 1000px;
+    position: absolute;
+    z-index: 4;
+    background-color: white;
+}
+
+.thirdBaseLine {
+    bottom: 17px;
+    left: 5px;
+}
+
+.firstBaseLine {
+    bottom: 7px;
+    left: 5px;
+    width: 1000px;
+    height: 2px;
+}
+
+.mound {
+    background-color: brown;
+    width: 60px;
+    height: 60px;
+    border-radius: 40px;
+    position: relative;
+    z-index: 8;
+    left: 140px;
+    top: 140px;
+}
+
+.rubber {
+    position: absolute;
+    background-color: white;
+    width: 4px;
+    height: 20px;
+    left: 34px;
+    top: 13px;
+    transform: rotate(-45deg);
+}

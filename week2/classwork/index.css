@@ -44,7 +44,7 @@ body {
     border-radius: 8px;
     box-shadow: 14px 14px 4px rgba(0, 0, 0, 0.5);
     /*transition: all .5s ease;*/
-    transition: box-shadow .5s ease, top .5s linear, transform .3s ease-in 2s;
+    transition: box-shadow .5s ease, top .5s linear, transform .3s ease;
 }
 
 .block:hover {
