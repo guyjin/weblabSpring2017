@@ -10,33 +10,12 @@ $links: yellow;
 }
 
 body {
-    font-size: 20px;
-    font-family: serif;
-    background-color: $backgroundColor;
-    color: $white;
-    width: 100%;
+    margin: 2em;
 }
 
-p {
-    padding: 1em;
-    background-color: #ccc;
-    color: #222;
-    margin: 1em;
-    width: 600px / 960px * 100%;
-    @include border-radius(10px);
-}
-
-ul {
-    @extend p;
-    background-color: lightblue;
-    li {
-        a {
-            color: $links;
-        }
-        &:last-child {
-            a {
-                color: red;
-            }
-        }
-    }
+ul,
+li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
 }
