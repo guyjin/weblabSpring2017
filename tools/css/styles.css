@@ -6,10 +6,42 @@ ol {
   padding: 0; }
 
 body {
-  margin: 2em; }
+  margin: 2em;
+  font-family: sans-serif;
+  font-size: 16px; }
 
 ul,
 li {
   margin: 0;
   padding: 0;
   list-style: none; }
+
+.states {
+  display: flex;
+  flex-direction: column; }
+  .states h4 {
+    border-bottom: 1px solid #000; }
+  .states .pages {
+    display: flex;
+    flex-wrap: wrap; }
+    .states .pages li {
+      display: block;
+      width: calc(23% - 2em);
+      box-shadow: 0 2px 3px rgba(0, 0, 0, 0.12), 0 3px 4px rgba(0, 0, 0, 0.24);
+      background-color: #fff;
+      margin: .5em; }
+      .states .pages li a {
+        display: block;
+        width: 100%;
+        padding: 10px 10px 10px 0;
+        text-decoration: none;
+        height: 1em;
+        color: #000; }
+        .states .pages li a:before {
+          font-family: FontAwesome;
+          content: "\f15b";
+          padding: 10px;
+          margin-right: 10px;
+          line-height: 1;
+          color: #fff;
+          background-color: orange; }
