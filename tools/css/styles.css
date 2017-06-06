@@ -1,0 +1,31 @@
+html,
+body,
+ul,
+ol {
+  margin: 0;
+  padding: 0; }
+
+body {
+  font-size: 20px;
+  font-family: serif;
+  background-color: #000;
+  color: #cfcfcf;
+  width: 100%; }
+
+p, ul {
+  padding: 1em;
+  background-color: #ccc;
+  color: #222;
+  margin: 1em;
+  width: 62.5%;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  border-radius: 10px; }
+
+ul {
+  background-color: lightblue; }
+  ul li a {
+    color: yellow; }
+  ul li:last-child a {
+    color: red; }
